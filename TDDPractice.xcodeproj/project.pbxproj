@@ -17,6 +17,9 @@
 		CE9EF5BC26A1271B0025D026 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EF5BB26A1271B0025D026 /* RandomNumberGenerator.swift */; };
 		CE9EF5D326A128FC0025D026 /* TDDPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3633AC26A111E800759E0D /* TDDPracticeTests.swift */; };
 		CE9EF5E726A12A220025D026 /* RandomNumberGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EF5E626A12A220025D026 /* RandomNumberGeneratorTests.swift */; };
+		CE9EF5EF26A1300C0025D026 /* RandomGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EF5EE26A1300C0025D026 /* RandomGame.swift */; };
+		CE9EF5F926A136EB0025D026 /* RandomGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EF5F826A136EB0025D026 /* RandomGameViewController.swift */; };
+		CE9EF60626A13DC00025D026 /* RandomGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EF5F326A1305C0025D026 /* RandomGameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		CE3633B926A111E800759E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE9EF5BB26A1271B0025D026 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
 		CE9EF5E626A12A220025D026 /* RandomNumberGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGeneratorTests.swift; sourceTree = "<group>"; };
+		CE9EF5EE26A1300C0025D026 /* RandomGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGame.swift; sourceTree = "<group>"; };
+		CE9EF5F326A1305C0025D026 /* RandomGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGameTests.swift; sourceTree = "<group>"; };
+		CE9EF5F826A136EB0025D026 /* RandomGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +124,10 @@
 		CE3633AB26A111E800759E0D /* TDDPracticeTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE3633AC26A111E800759E0D /* TDDPracticeTests.swift */,
 				CE9EF5E626A12A220025D026 /* RandomNumberGeneratorTests.swift */,
+				CE9EF5F326A1305C0025D026 /* RandomGameTests.swift */,
 				CE3633AE26A111E800759E0D /* Info.plist */,
+				CE3633AC26A111E800759E0D /* TDDPracticeTests.swift */,
 			);
 			path = TDDPracticeTests;
 			sourceTree = "<group>";
@@ -138,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				CE9EF5BB26A1271B0025D026 /* RandomNumberGenerator.swift */,
+				CE9EF5EE26A1300C0025D026 /* RandomGame.swift */,
+				CE9EF5F826A136EB0025D026 /* RandomGameViewController.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -273,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE36339A26A111E700759E0D /* ViewController.swift in Sources */,
+				CE9EF5F926A136EB0025D026 /* RandomGameViewController.swift in Sources */,
+				CE9EF5EF26A1300C0025D026 /* RandomGame.swift in Sources */,
 				CE36339626A111E700759E0D /* AppDelegate.swift in Sources */,
 				CE36339826A111E700759E0D /* SceneDelegate.swift in Sources */,
 				CE9EF5BC26A1271B0025D026 /* RandomNumberGenerator.swift in Sources */,
@@ -283,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9EF60626A13DC00025D026 /* RandomGameTests.swift in Sources */,
 				CE9EF5E726A12A220025D026 /* RandomNumberGeneratorTests.swift in Sources */,
 				CE9EF5D326A128FC0025D026 /* TDDPracticeTests.swift in Sources */,
 			);

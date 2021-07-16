@@ -32,7 +32,6 @@ class RandomGame {
     }
     
     enum RandomGameError: Error {
-        case judge
         case wrongPlayerCount
     }
     
@@ -41,52 +40,36 @@ class RandomGame {
     let playMode: PlayMode
     private var targetNumber: Int
     
-    init(playMode: PlayMode) {
+    init(playMode: PlayMode, targetNumber: Int) {
         self.playMode = playMode
-        self.targetNumber = RandomNumberGenerator.generateRandomNumber()
+        self.targetNumber = targetNumber
     }
     
     
     // MARK: - Method
     
-    func setTargetNumber(_ targetNumber: Int) {
-        self.targetNumber = targetNumber
-    }
-    
-    func judgeGameResult(_ number: Int) throws -> GameResult {
+    private func judgeGameResult(_ number: Int) -> GameResult {
         let numberGap = number - targetNumber
-        if numberGap == GameResult.equal.rawValue {
-            return .equal
-        } else if numberGap >= GameResult.high.rawValue {
+        switch numberGap.signum() {
+        case 1:
             return .high
-        } else if numberGap <= GameResult.low.rawValue{
+        case -1:
             return .low
+        default:
+            return .equal
         }
-        
-        throw RandomGameError.judge
     }
     
-    func play(_ number: Int) throws -> GameResult {
-        do {
-            return try judgeGameResult(number)
-        } catch {
-            throw error
-        }
+    func play(_ number: Int) -> GameResult {
+        return judgeGameResult(number)
     }
     
     func play(_ numbers: [Int]) throws -> [GameResult] {
         guard numbers.count == playMode.playerCount else {
             throw RandomGameError.wrongPlayerCount
         }
-        
-        do {
-            let results = try numbers.map { number -> GameResult in
-                return try judgeGameResult(number)
-            }
-    
-            return results
-        } catch {
-            throw error
+        return numbers.map { number -> GameResult in
+            return judgeGameResult(number)
         }
     }
 }

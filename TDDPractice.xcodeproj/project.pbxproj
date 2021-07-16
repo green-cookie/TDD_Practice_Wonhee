@@ -13,8 +13,10 @@
 		CE36339D26A111E700759E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE36339B26A111E700759E0D /* Main.storyboard */; };
 		CE36339F26A111E800759E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE36339E26A111E800759E0D /* Assets.xcassets */; };
 		CE3633A226A111E800759E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3633A026A111E800759E0D /* LaunchScreen.storyboard */; };
-		CE3633AD26A111E800759E0D /* TDDPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3633AC26A111E800759E0D /* TDDPracticeTests.swift */; };
 		CE3633B826A111E800759E0D /* TDDPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3633B726A111E800759E0D /* TDDPracticeUITests.swift */; };
+		CE9EF5BC26A1271B0025D026 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EF5BB26A1271B0025D026 /* RandomNumberGenerator.swift */; };
+		CE9EF5D326A128FC0025D026 /* TDDPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3633AC26A111E800759E0D /* TDDPracticeTests.swift */; };
+		CE9EF5E726A12A220025D026 /* RandomNumberGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EF5E626A12A220025D026 /* RandomNumberGeneratorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CE3633B326A111E800759E0D /* TDDPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3633B726A111E800759E0D /* TDDPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDPracticeUITests.swift; sourceTree = "<group>"; };
 		CE3633B926A111E800759E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9EF5BB26A1271B0025D026 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
+		CE9EF5E626A12A220025D026 /* RandomNumberGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGeneratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		CE36339426A111E700759E0D /* TDDPractice */ = {
 			isa = PBXGroup;
 			children = (
+				CE9EF5BA26A126EA0025D026 /* Game */,
 				CE36339526A111E700759E0D /* AppDelegate.swift */,
 				CE36339726A111E700759E0D /* SceneDelegate.swift */,
 				CE36339926A111E700759E0D /* ViewController.swift */,
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3633AC26A111E800759E0D /* TDDPracticeTests.swift */,
+				CE9EF5E626A12A220025D026 /* RandomNumberGeneratorTests.swift */,
 				CE3633AE26A111E800759E0D /* Info.plist */,
 			);
 			path = TDDPracticeTests;
@@ -126,6 +132,14 @@
 				CE3633B926A111E800759E0D /* Info.plist */,
 			);
 			path = TDDPracticeUITests;
+			sourceTree = "<group>";
+		};
+		CE9EF5BA26A126EA0025D026 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				CE9EF5BB26A1271B0025D026 /* RandomNumberGenerator.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +275,7 @@
 				CE36339A26A111E700759E0D /* ViewController.swift in Sources */,
 				CE36339626A111E700759E0D /* AppDelegate.swift in Sources */,
 				CE36339826A111E700759E0D /* SceneDelegate.swift in Sources */,
+				CE9EF5BC26A1271B0025D026 /* RandomNumberGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3633AD26A111E800759E0D /* TDDPracticeTests.swift in Sources */,
+				CE9EF5E726A12A220025D026 /* RandomNumberGeneratorTests.swift in Sources */,
+				CE9EF5D326A128FC0025D026 /* TDDPracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +389,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -427,6 +444,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
